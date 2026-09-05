@@ -33,11 +33,11 @@ export const { ObserveModule, ObserveInstrument } = createObserveModule();
   imports: [
     // Distributed tracing, auto-correlated logs, request/job metrics, error
     // telemetry, alarms, and more — out of the box. Sign up at https://observe.nestjs.com
-    ObserveModule.forRoot({
-      appKey: 'YOUR_APP_KEY',
-      appSecret: 'YOUR_APP_SECRET',
-      serviceId: 'healthflexroute-api',
-    }),
+    // ObserveModule.forRoot({
+    //   appKey: 'YOUR_APP_KEY',
+    //   appSecret: 'YOUR_APP_SECRET',
+    //   serviceId: 'healthflexroute-api',
+    // }),
     TypeOrmModule.forRoot({
       type: 'better-sqlite3',
       database: 'database.sqlite', // File name where DB will be stored (or ':memory:')
