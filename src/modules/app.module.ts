@@ -1,23 +1,6 @@
 import { Module } from '@nestjs/common';
 import { createObserveModule } from '@nestjs/observe';
 
-// Controllers
-import { AuthController } from '../controllers/auth/auth.controller.js';
-import { HealthcentersController } from '../controllers/healthcenters/healthcenters.controller.js';
-import { UsersController } from '../controllers/users/users.controller.js';
-import { RoutesController } from '../controllers/routes/routes.controller.js';
-import { PatientsController } from '../controllers/patients/patients.controller.js';
-import { TreatmentsController } from '../controllers/treatments/treatments.controller.js';
-import { VehiclesController } from '../controllers/vehicles/vehicles.controller.js';
-
-// Services
-import { AuthService } from '../services/auth/auth.service.js';
-import { HealthcentersService } from '../services/healthcenters/healthcenters.service.js';
-import { PatientsService } from '../services/patients/patients.service.js';
-import { RoutesService } from '../services/routes/routes.service.js';
-import { TreatmentsService } from '../services/treatments/treatments.service.js';
-import { UsersService } from '../services/users/users.service.js';
-import { VehiclesService } from '../services/vehicles/vehicles.service.js';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { AuthModule } from './auth/auth.module.js';
 import { HealthcentersModule } from './healthcenters/healthcenters.module.js';
