@@ -9,7 +9,7 @@ import { jwtConstants } from './../../services/auth/constants.js';
   imports: [
     UsersModule,
     JwtModule.register({
-      secret: jwtConstants.secret || 'default_secret_key', // Use a default secret key if not provided in environment variables
+      secret: process.env.JWT_API_KEY || 'default_secret_key', // Use a default secret key if not provided in environment variables
       signOptions: { expiresIn: '1h' }, // Token expiration time
     }),
   ],
