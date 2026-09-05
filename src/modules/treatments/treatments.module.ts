@@ -3,8 +3,8 @@ import { TreatmentsController } from '../../controllers/treatments/treatments.co
 import { TreatmentsService } from '../../services/treatments/treatments.service.js';
 
 @Module({
-    imports: [],
-    controllers: [TreatmentsController],
-    providers: [TreatmentsService],
+  imports: [],
+  controllers: [TreatmentsController],
+  providers: [TreatmentsService],
 })
 export class TreatmentsModule {}

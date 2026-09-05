@@ -41,7 +41,7 @@ export const { ObserveModule, ObserveInstrument } = createObserveModule();
     TypeOrmModule.forRoot({
       type: 'better-sqlite3',
       database: 'database.sqlite', // File name where DB will be stored (or ':memory:')
-      entities: [__dirname + '/**/*.entity{.ts,.js}'],
+      autoLoadEntities: true, // Automatically load entities (recommended)
       synchronize: true, // Automatically syncs schema with entities (dev only!)
     }),
     AuthModule,
