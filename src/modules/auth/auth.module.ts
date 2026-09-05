@@ -1,9 +1,19 @@
 import { Module } from '@nestjs/common';
 import { AuthController } from '../../controllers/auth/auth.controller.js';
 import { AuthService } from '../../services/auth/auth.service.js';
+import { UsersModule } from '../users/users.module.js';
+import { JwtModule } from '@nestjs/jwt';
+import { jwtConstants } from './../../services/auth/constants.js';
 
 @Module({
-  imports: [],
+  imports: [
+    UsersModule,
+    JwtModule.register({
+      secret: jwtConstants.secret || 'default_secret_key', // Use a default secret key if not provided in environment variables
+      signOptions: { expiresIn: '1h' }, // Token expiration time
+    }),
+  ],
+  exports: [AuthService],
   controllers: [AuthController],
   providers: [AuthService],
 })
