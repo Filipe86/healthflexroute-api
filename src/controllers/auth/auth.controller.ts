@@ -7,24 +7,30 @@ import {
   HttpStatus,
   Post,
   Req,
-  UseGuards
 } from '@nestjs/common';
-import { AuthGuard } from './../../services/auth/auth.guard.js';
 import { AuthService } from './../../services/auth/auth.service.js';
+import { Public } from '../../services/auth/auth.public.js';
+import { UserDto } from '../users/user.dto.js';
 
 @Controller('auth')
 export class AuthController {
   constructor(private readonly authService: AuthService) {}
 
   @HttpCode(HttpStatus.OK)
+  @Public()
   @Post('login')
   signIn(@Body() signInDto: Record<string, any>) {
     return this.authService.signIn(signInDto.username, signInDto.password);
   }
 
-  @UseGuards(AuthGuard)
   @Get('profile')
   getProfile(@Req() request: Request & { user: unknown }) {
     return "This is a protected route. You are authenticated as: " + JSON.stringify(request.user);
+  }
+
+  @Public()
+  @Post('register')
+  register(@Body() registerDto: UserDto) {
+    return this.authService.register(registerDto);
   }
 }

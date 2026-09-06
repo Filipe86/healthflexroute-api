@@ -1,4 +1,3 @@
-
 export default () => ({
   jwtSecret: process.env.JWT_API_KEY || 'default_secret_key',
   database: {

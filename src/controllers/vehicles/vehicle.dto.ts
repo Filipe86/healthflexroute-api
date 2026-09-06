@@ -1,4 +1,4 @@
-interface VehicleDto {
+export class VehicleDto {
   id: string;
   make: string;
   model: string;

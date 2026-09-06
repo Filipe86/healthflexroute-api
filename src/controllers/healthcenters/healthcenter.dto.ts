@@ -1,4 +1,4 @@
-interface HealthCenterDto {
+export class HealthCenterDto {
   id: string;
   name: string;
   address: string;

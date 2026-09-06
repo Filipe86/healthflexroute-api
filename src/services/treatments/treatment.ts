@@ -1,4 +1,4 @@
-interface Treatment {
+export class Treatment {
   id: string;
   name: string;
   description: string;

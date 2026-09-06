@@ -1,7 +1,6 @@
-interface UserDto {
-  id: string;
+export class UserDto {  
+  username: string;
   name: string;
   email: string;
   password: string;
-  role: 'admin' | 'user';
 }

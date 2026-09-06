@@ -1,4 +1,4 @@
-interface HeathCenter {
+export class HealthCenter {
   id: string;
   name: string;
   address: string;

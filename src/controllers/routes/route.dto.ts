@@ -1,4 +1,4 @@
-interface RouteDto {
+export class RouteDto {
   id: string;
   name: string;
   description: string;

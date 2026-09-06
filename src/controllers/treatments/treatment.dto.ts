@@ -1,4 +1,4 @@
-interface TreatmentDto {
+export class TreatmentDto {
   id: string;
   name: string;
   description: string;

@@ -1,4 +1,4 @@
-interface Route {
+export class Route {
   id: string;
   name: string;
   description: string;
